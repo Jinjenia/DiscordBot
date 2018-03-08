@@ -5,7 +5,7 @@
   "main": "bot.js",
   "engines": {
     "node": "8.10.0"
-  }
+  },
   "scripts": {
     "start": "node bot.js"
   },
