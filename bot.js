@@ -6,8 +6,8 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-	if (message.content === 'nigger') {
-		message.reply('Bigge stole my nike');
+	if (message.content === 'dalen') {
+		message.reply('jamm');
 	}
 });
 /**
