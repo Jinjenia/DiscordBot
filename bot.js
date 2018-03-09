@@ -26,8 +26,5 @@ var role = member.guild.roles.find('name', '50cc');
 member.addRole(role)
 
 });
-client.on('guildMemberAdd', member => {
-	message.send('User ' + member.user.username + ' has joined the server!')
-});
 
 client.login(process.env.BOT_TOKEN);
