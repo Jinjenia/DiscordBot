@@ -10,22 +10,23 @@ client.on('message', message => {
 		message.reply('pong');
 	}
 });
-var serverid = "181502086259671040";
-var drole = "267042704603480064";
-client.on('ready', function() {
-  console.log("Successfully connected autorole: " + client.username + " - (" + client.id + ")");
+/**
+ * The ready event is vital, it means that only _after_ this will your bot start reacting to information
+ * received from Discord
+ */
+client.on('ready', () => {
+  console.log('I am ready!');
 });
 
-client.on('guildMemberAdd', function(callback) { /* Event called when someone joins the server */
-  if(callback.guild_id == serverid)
-    client.addToRole({"serverID":serverid,"userID":callback.id,"roleID":drole},function(err,response) {
-      if (err) console.error(err); /* Failed to apply role */
-        /* some code */
-	client.sendMessage({
-		to: 181502086259671040,
-        message: 'Welcome to the server!'
-	});
-  });
- });
+// Create an event listener for new guild members
+client.on('guildMemberAdd', member => {
+  // Send the message to a designated channel on a server:
+  const channel = member.guild.channels.find('name', 'member-log');
+  // Do nothing if the channel wasn't found on this server
+  if (!channel) return;
+  // Send the message, mentioning the member
+  channel.send(`Welcome to the server, ${member}`);
+});
+
 
 client.login(process.env.BOT_TOKEN);
