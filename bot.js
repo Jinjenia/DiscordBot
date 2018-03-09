@@ -23,8 +23,11 @@ client.on('guildMemberAdd', member => {
 	console.log('User ' + member.user.username + ' has joined the server!')
 	
 var role = member.guild.roles.find('name', '50cc');
-member.addRole(role);
-member.reply('Wilkommen')
+member.addRole(role)
 
 });
+client.on('guildMemberAdd', member => {
+	message.send('User ' + member.user.username + ' has joined the server!')
+});
+
 client.login(process.env.BOT_TOKEN);
