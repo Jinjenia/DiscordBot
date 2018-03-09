@@ -2,12 +2,14 @@
   "name": "DiscordBot",
   "description": "Bot",
   "version": "1.0.0",
-  "main": "bot.js",
-  "scripts": {
-    "start": "node bot.js",
-  },
-  "dependencies": {
-    "discord.js": "11.1.0",
-    "request": "2.81.0",
+   "main": "bot.js",
+   "scripts": {
+     "start": "node bot.js",
+     "test": "echo \"Error: no test specified\" && exit 1"
+   },
+   "dependencies": {
+     "discord.js": "11.1.0",
+     "request": "2.81.0",
+   },
   },
 }
