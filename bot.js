@@ -24,6 +24,7 @@ client.on('guildMemberAdd', member => {
 	
 var role = member.guild.roles.find('name', '50cc');
 member.addRole(role)
+member.reply('Wilkommen')
 
 });
 client.login(process.env.BOT_TOKEN);
