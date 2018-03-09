@@ -23,7 +23,7 @@ client.on('guildMemberAdd', member => {
 	console.log('User ' + member.user.username + ' has joined the server!')
 	
 var role = member.guild.roles.find('name', '50cc');
-member.addRole(role)
+member.addRole(role);
 member.reply('Wilkommen')
 
 });
