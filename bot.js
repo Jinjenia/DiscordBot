@@ -26,7 +26,8 @@ client.on('ready', () => {
 
 // Create an event listener for new guild members
 client.on('guildMemberAdd', member => {
-	console.log('User ' + member.user.username + ' has joined the server!')
+	console.log('User ' + member.user.username + ' has joined the server!');
+	client.sendMessage('181502086259671040', 'Welcome boi')
 	
 var role = member.guild.roles.find('name', '50cc');
 member.addRole(role)
