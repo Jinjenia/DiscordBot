@@ -2,7 +2,13 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.on('ready', () => {
-	.setPresence({ game: { name: 'with my dick', type: 0 }
+	client.user.setStatus('available') // Can be 'available', 'idle', 'dnd', or 'invisible'
+    	client.user.setPresence({
+        game: {
+            name: 'with my dick',
+            type: 0
+        }
+    });
 });
 
 client.on('message', message => {
