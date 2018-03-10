@@ -30,7 +30,7 @@ client.on('guildMemberAdd', member => {
 	
 var role = member.guild.roles.find('name', '50cc');
 member.addRole(role);
-client.sendMessage('181502086259671040', 'Welcome boi')
+client.channels.get(181502086259671040).send('My Message')
 
 });
 
