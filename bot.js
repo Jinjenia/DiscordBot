@@ -51,10 +51,10 @@ client.on('message', async message => {
 });
 
 //Youtube Stream
-const ytdl = require('ytdl-core');
-connection.play(ytdl(
-  'https://www.youtube.com/watch?v=G2vA6Dngzhs',
-  { filter: 'audioonly' }));
-});
+//const ytdl = require('ytdl-core');
+//connection.play(ytdl(
+//  'https://www.youtube.com/watch?v=G2vA6Dngzhs',
+//  { filter: 'audioonly' }));
+//});
 
 client.login(process.env.BOT_TOKEN);
