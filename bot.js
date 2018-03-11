@@ -33,4 +33,28 @@ member.addRole(role);
 
 });
 
+//MusicBot
+//Joining Channel
+client.on('message', async message => {
+  // Voice only works in guilds, if the message does not come from a guild,
+  // we ignore it
+  if (!message.guild) return;
+
+  if (message.content === '/join') {
+    // Only try to join the sender's voice channel if they are in one themselves
+    if (message.member.voiceChannel) {
+      const connection = await message.member.voiceChannel.join();
+    } else {
+      message.reply('You need to join a voice channel first!');
+    }
+  }
+});
+
+//Youtube Stream
+const ytdl = require('ytdl-core');
+connection.play(ytdl(
+  'https://www.youtube.com/watch?v=G2vA6Dngzhs',
+  { filter: 'audioonly' }));
+});
+
 client.login(process.env.BOT_TOKEN);
